@@ -178,8 +178,8 @@
 
     <nav class="sidebar">
         <div class="mb-16">
-            <h2 class="text-3xl font-bold tracking-tighter">DN<span class="text-gold">.</span></h2>
-            <p class="text-[0.6rem] uppercase tracking-[4px] opacity-60 mt-2 font-bold">Executive Portfolio</p>
+            <h2 class="text-3xl font-bold tracking-tighter">DN<span style="color: #c5a059;">.</span></h2>
+            <p id="portfolioLabel" class="text-[0.6rem] uppercase tracking-[4px] opacity-60 mt-2 font-bold">Portfólio Executivo</p>
         </div>
 
         <div class="flex-grow">
@@ -192,10 +192,13 @@
 
         <div class="mt-auto">
             <div class="flex gap-4 text-gold mb-4">
-                <i class="fab fa-linkedin-in cursor-pointer"></i>
-                <i class="fas fa-envelope cursor-pointer"></i>
+                <a href="https://www.linkedin.com/in/deborah-carolina-de-oliveira-nunes-pmp-16370640/" target="_blank" style="color: #c5a059;"><i class="fab fa-linkedin-in cursor-pointer"></i></a>
+                <a href="mailto:deborah.arquiteta@gmail.com" style="color: #c5a059;"><i class="fas fa-envelope cursor-pointer"></i></a>
             </div>
-            <p class="text-[0.6rem] uppercase tracking-widest opacity-50 font-bold">PMP® Senior Specialist</p>
+            <p id="specialistLabel" class="text-[0.6rem] uppercase tracking-widest opacity-50 font-bold mb-4">Gerente de Projetos Sênior - PMP®</p>
+            <button onclick="toggleLang()" id="langBtn" style="background:transparent; border: 1px solid rgba(197,160,89,0.5); color: #c5a059; padding: 0.4rem 1rem; font-size: 0.7rem; letter-spacing: 2px; font-weight: 700; cursor: pointer; transition: all 0.3s; text-transform: uppercase;">
+                🌐 EN
+            </button>
         </div>
     </nav>
 
@@ -206,9 +209,9 @@
             <div class="max-w-3xl relative">
                 <div class="gold-line"></div>
                 <h1 class="text-8xl text-navy mb-4">Deborah <br><span class="italic font-light">Nunes</span></h1>
-                <p class="text-xl text-slate font-light leading-relaxed max-w-xl">
+                <p id="s1p" class="text-xl text-slate font-light leading-relaxed max-w-xl">
                     Liderança que une o rigor da engenharia de projetos à visão estratégica de negócios. 
-                    <span class="text-gold font-bold">PMP®, SFC™, Lean Six Sigma Green Belt e Especialista em Transformação Digital SAP.</span>
+                    <br><span class="text-gold font-bold">PMP®, SFC™, Lean Six Sigma Green Belt e Especialista em Transformação Digital.</span>
                 </p>
             </div>
         </section>
@@ -218,54 +221,77 @@
             <span class="number-bg">02</span>
             <div class="grid grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-5xl mb-8">Tradução de <br><span class="italic">Complexidade</span> em Valor.</h2>
-                    <p class="text-slate mb-6">
+                    <h2 id="s2h2" class="text-5xl mb-8">Tradução de <br><span class="italic">Complexidade</span> em Valor.</h2>
+                    <p id="s2p" class="text-slate mb-6">
                         Com mais de 15 anos de experiência, especializei-me na criação de PMOs estratégicos para ambientes de alta complexidade.
                     </p>
                     <div class="grid grid-cols-2 gap-8 mt-10">
                         <div class="whitespace-nowrap">
                             <span class="text-4xl font-serif text-gold font-bold">R$ 16.7M</span>
-                            <p class="text-[0.7rem] uppercase tracking-widest font-bold mt-2">Maior Budget Sob Gestão</p>
+                            <p id="s2budget" class="text-[0.7rem] uppercase tracking-widest font-bold mt-2">Maior Budget Sob Gestão</p>
                         </div>
                         <div>
                             <span class="text-4xl font-serif text-gold font-bold">LATAM</span>
-                            <p class="text-[0.7rem] uppercase tracking-widest font-bold mt-2">Escopo de Atuação</p>
+                            <p id="s2scope" class="text-[0.7rem] uppercase tracking-widest font-bold mt-2">Escopo de Atuação</p>
                         </div>
                     </div>
                 </div>
-                <div class="dark-card">
-                    <h3 class="text-gold font-bold uppercase text-xs tracking-widest mb-6">Diferenciais Executivos</h3>
+                <div>
+                    <h3 id="s2diff" style="color: #c5a059;" class="font-bold uppercase text-xs tracking-widest mb-6">Diferenciais Executivos</h3>
                     <ul class="space-y-4 text-sm">
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i> Gestão E2E de CAPEX e OPEX</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i> Especialista em SAP S/4HANA</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i> Turnaround de projetos em crise</li>
-                        <li class="flex items-center gap-3"><i class="fas fa-check text-gold"></i> Inglês C1 e Mobilidade Global</li>
+                        <li class="s2li flex items-center gap-3" style="color: #c5a059;"><i class="fas fa-check" style="color: #c5a059;"></i> Gestão E2E de CAPEX e OPEX</li>
+                        <li class="s2li flex items-center gap-3" style="color: #c5a059;"><i class="fas fa-check" style="color: #c5a059;"></i> Especialista em SAP S/4HANA</li>
+                        <li class="s2li flex items-center gap-3" style="color: #c5a059;"><i class="fas fa-check" style="color: #c5a059;"></i> Turnaround de projetos em crise</li>
+                        <li class="s2li flex items-center gap-3" style="color: #c5a059;"><i class="fas fa-check" style="color: #c5a059;"></i> Inglês C1 e Mobilidade Global</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- SLIDE 3 -->
-        <section class="slide" id="slide3">
+        <section class="slide" id="slide3" style="justify-content: flex-start; padding-top: 4rem;">
             <span class="number-bg">03</span>
-            <h2 class="text-5xl mb-12">Principais Entregas <span class="italic">Estratégicas</span></h2>
-            <div class="grid grid-cols-2 gap-10">
+            <h2 id="s3h2" class="text-5xl mb-10">Principais Entregas <span class="italic">Estratégicas</span></h2>
+            <div class="grid grid-cols-2 gap-8">
                 <div class="project-card">
-                    <span class="text-gold font-bold text-[0.7rem] tracking-[3px] uppercase">Electrolux</span>
-                    <h4 class="text-3xl font-serif my-3">Pricing Tool Brasil</h4>
-                    <p class="text-sm text-slate mb-6 leading-relaxed">Resgate de projeto com 2 anos de atraso. Reestruturação financeira e entrega de módulos core SaaS.</p>
-                    <div class="flex gap-2">
+                    <span class="text-gold font-bold text-[0.7rem] tracking-[3px] uppercase">Electrolux · Dexian</span>
+                    <h4 class="s3card-title text-2xl font-serif my-2">Pricing Tool Brasil — Turnaround SaaS</h4>
+                    <p class="s3card-desc text-sm text-slate mb-4 leading-relaxed">Assumiu projeto crítico com <strong>2 anos de atraso</strong> e overspend acumulado. Reverteu o cenário com reestruturação financeira completa e entregou 3 módulos estratégicos Zilliant (Price Management, Deal Management e Price Analytics) em Go-Live dentro do prazo e orçamento.</p>
+                    <div class="flex flex-wrap gap-2">
                         <span class="skill-tag">Turnaround</span>
                         <span class="skill-tag">R$ 16.7M</span>
+                        <span class="skill-tag">SaaS B2B</span>
+                        <span class="skill-tag">CAPEX/OPEX</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="text-gold font-bold text-[0.7rem] tracking-[3px] uppercase">Electrolux · Dexian</span>
+                    <h4 class="s3card-title text-2xl font-serif my-2">Trade Deals Web — Go-Live Jan/2026</h4>
+                    <p class="s3card-desc text-sm text-slate mb-4 leading-relaxed">Liderou a substituição do legado Vistex (SAP) pelo sistema TDW, com integração às plataformas SAP e Zilliant. Governança financeira com <strong>zero desvios de compliance</strong>, Status Reports executivos semanais com SPI/CPI e gestão completa do Hypercare pós Go-Live.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">R$ 2.67M</span>
+                        <span class="skill-tag">SAP Integration</span>
+                        <span class="skill-tag">Hypercare</span>
                     </div>
                 </div>
                 <div class="project-card">
                     <span class="text-gold font-bold text-[0.7rem] tracking-[3px] uppercase">Natura & Co</span>
-                    <h4 class="text-3xl font-serif my-3">SAP S/4HANA T4.ELO</h4>
-                    <p class="text-sm text-slate mb-6 leading-relaxed">Governança do template global para LATAM. Gestão de 40 squads e coordenação internacional.</p>
-                    <div class="flex gap-2">
+                    <h4 class="s3card-title text-2xl font-serif my-2">SAP S/4HANA T4.ELO — LATAM</h4>
+                    <p class="s3card-desc text-sm text-slate mb-4 leading-relaxed">Governança do maior programa de transformação da Natura&Co, abrangendo Brasil, Chile, Colômbia e Peru. Coordenou <strong>40+ squads regionais</strong>, rituais executivos com Steering Committee e alinhamento entre Finanças, Supply Chain, IT e Tax na fase de template global.</p>
+                    <div class="flex flex-wrap gap-2">
                         <span class="skill-tag">Global Governance</span>
                         <span class="skill-tag">SAP Activate</span>
+                        <span class="skill-tag">LATAM</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <span class="text-gold font-bold text-[0.7rem] tracking-[3px] uppercase">Natura · Numen IT</span>
+                    <h4 class="s3card-title text-2xl font-serif my-2">Upgrade LIMS v8 — Economia R$ 228K</h4>
+                    <p class="s3card-desc text-sm text-slate mb-4 leading-relaxed">Gerenciou o upgrade do sistema laboratorial Labware com substituição de conector e atualização de infraestrutura Citrix. Otimização do planejamento financeiro gerou <strong>economia líquida de R$ 228.000</strong> devolvida ao orçamento da Natura, com Hypercare de 30 dias e KPIs de SLA.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-tag">R$ 1.48M</span>
+                        <span class="skill-tag">Cost Optimization</span>
+                        <span class="skill-tag">Infraestrutura</span>
                     </div>
                 </div>
             </div>
@@ -274,47 +300,55 @@
         <!-- SLIDE 4 -->
         <section class="slide" id="slide4">
             <span class="number-bg">04</span>
-            <h2 class="text-5xl mb-12">Expertise Técnica & <span class="italic">Certificações</span></h2>
+            <h2 id="s4h2" class="text-5xl mb-12">Expertise Técnica & <span class="italic">Certificações</span></h2>
             <div class="grid grid-cols-3 gap-12">
                 <div class="space-y-6">
-                    <h5 class="text-xs font-bold tracking-widest text-navy uppercase border-b border-gold pb-2 inline-block">Project Tools</h5>
+                    <h5 id="s4tools" class="text-xs font-bold tracking-widest text-navy uppercase border-b border-gold pb-2 inline-block">Project Tools</h5>
                     <div class="flex flex-wrap gap-2 mt-4">
                         <span class="tech-badge-dark">MS Project</span>
-                        <span class="tech-badge-dark">Jira / Confluence</span>
-                        <span class="tech-badge-dark">Solman 7.2</span>
-                        <span class="tech-badge-dark">Power BI</span>
+                        <span class="tech-badge-dark">Jira & Confluence</span>
+                        <span class="tech-badge-dark">SharePoint</span>
+                        <span class="tech-badge-dark">SAP SolMan 7.1/7.2</span>
+                        <span class="tech-badge-dark">HP ALM</span>
+                        <span class="tech-badge-dark">Visio & Bizagi (BPMN)</span>
+                        <span class="tech-badge-dark">Excel Avançado</span>
                         <span class="tech-badge-dark">GenAI (PMI)</span>
                     </div>
                 </div>
                 <div class="col-span-2 grid grid-cols-2 gap-6">
+
                     <div class="bg-white p-6 flex items-center gap-4 shadow-sm border border-navy/5">
-                        <div class="text-gold text-3xl"><i class="fas fa-certificate"></i></div>
+                        <img src="https://img.icons8.com/color/48/pmp.png" alt="PMP" style="width:42px; height:42px; object-fit:contain;"/>
                         <div>
                             <p class="font-bold text-sm">PMP®</p>
-                            <p class="text-[0.65rem] text-slate uppercase">Project Management Professional</p>
+                            <p class="s4cert text-[0.65rem] text-slate uppercase">Project Management Professional</p>
                         </div>
                     </div>
+
                     <div class="bg-white p-6 flex items-center gap-4 shadow-sm border border-navy/5">
-                        <div class="text-gold text-3xl"><i class="fas fa-bolt"></i></div>
+                        <img src="https://img.icons8.com/color/48/six-sigma.png" alt="Green Belt" style="width:42px; height:42px; object-fit:contain;"/>
                         <div>
                             <p class="font-bold text-sm">Green Belt</p>
-                            <p class="text-[0.65rem] text-slate uppercase">Lean Six Sigma - Escola Edti</p>
+                            <p class="s4cert text-[0.65rem] text-slate uppercase">Lean Six Sigma · Escola Edti</p>
                         </div>
                     </div>
+
                     <div class="bg-white p-6 flex items-center gap-4 shadow-sm border border-navy/5">
-                        <div class="text-gold text-3xl"><i class="fas fa-sync"></i></div>
+                        <img src="https://img.icons8.com/color/48/scrum.png" alt="SFC" style="width:42px; height:42px; object-fit:contain;"/>
                         <div>
-                            <p class="font-bold text-sm">SFCM</p>
-                            <p class="text-[0.65rem] text-slate uppercase">Scrum Fundamentals Certified</p>
+                            <p class="font-bold text-sm">SFC™</p>
+                            <p class="s4cert text-[0.65rem] text-slate uppercase">Scrum Fundamentals · SCRUMstudy</p>
                         </div>
                     </div>
+
                     <div class="bg-white p-6 flex items-center gap-4 shadow-sm border border-navy/5">
-                        <div class="text-gold text-3xl"><i class="fas fa-brain"></i></div>
+                        <img src="https://img.icons8.com/color/48/artificial-intelligence.png" alt="AI" style="width:42px; height:42px; object-fit:contain;"/>
                         <div>
                             <p class="font-bold text-sm">AI for PMs</p>
-                            <p class="text-[0.65rem] text-slate uppercase">PMI & Google Certifications</p>
+                            <p class="s4cert text-[0.65rem] text-slate uppercase">PMI & Google Certifications</p>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
@@ -323,15 +357,15 @@
         <section class="slide" id="slide5">
             <div class="max-w-xl">
                 <div class="gold-line"></div>
-                <h2 class="text-6xl mb-10">Vamos conversar sobre o seu <span class="italic text-gold">próximo projeto</span>.</h2>
+                <h2 id="s5h2" class="text-6xl mb-10">Vamos conversar sobre o seu <span class="italic text-gold">próximo projeto</span>.</h2>
                 <div class="space-y-6 text-xl">
-                    <p class="flex items-center gap-4"><i class="fas fa-envelope text-gold"></i> deborah.arquiteta@gmail.com</p>
-                    <p class="flex items-center gap-4"><i class="fab fa-linkedin text-gold"></i> linkedin.com/in/deborah-carolina-nunes</p>
-                    <p class="flex items-center gap-4"><i class="fas fa-phone text-gold"></i> +55 11 985.364.558</p>
+                    <p class="flex items-center gap-4"><i class="fas fa-envelope text-gold"></i> <a href="mailto:deborah.arquiteta@gmail.com" style="color: inherit;">deborah.arquiteta@gmail.com</a></p>
+                    <p class="flex items-center gap-4"><i class="fab fa-linkedin text-gold"></i> <a href="https://www.linkedin.com/in/deborah-carolina-de-oliveira-nunes-pmp-16370640/" target="_blank" style="color: inherit;">linkedin.com/in/deborah-carolina-nunes</a></p>
+
                 </div>
-                <button class="btn-download" onclick="window.print()">
-                    <i class="fas fa-download"></i> Baixar Portfólio
-                </button>
+                <a id="s5btn" href="Deborah_Carolina_de_Oliveira_Nunes_-_CL.pdf" download class="btn-download">
+                    <i class="fas fa-download"></i> Baixar CV
+                </a>
             </div>
         </section>
 
@@ -340,11 +374,119 @@
     <script>
         function showSlide(index) {
             document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
-            document.getElementById(`slide${index}`).classList.add('active');
+            document.getElementById('slide' + index).classList.add('active');
             document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-            document.querySelectorAll('.nav-link')[index-1].classList.add('active');
+            document.querySelectorAll('.nav-link')[index - 1].classList.add('active');
+        }
+
+        const translations = {
+            pt: {
+                navLinks: ['01. Introdução', '02. Visão Estratégica', '03. Cases de Sucesso', '04. Toolset & Certs', '05. Contato'],
+                s1p: 'Liderança que une o rigor da engenharia de projetos à visão estratégica de negócios.',
+                s1span: 'PMP®, SFC™, Lean Six Sigma Green Belt e Especialista em Transformação Digital.',
+                s2h2: 'Tradução de <br><span class="italic">Complexidade</span> em Valor.',
+                s2p: 'Com mais de 15 anos de experiência, especializei-me na criação de PMOs estratégicos para ambientes de alta complexidade.',
+                s2budget: 'Maior Budget Sob Gestão',
+                s2scope: 'Escopo de Atuação',
+                s2diff: 'Diferenciais Executivos',
+                s2li: ['Gestão E2E de CAPEX e OPEX', 'Especialista em SAP S/4HANA', 'Turnaround de projetos em crise', 'Inglês C1 e Mobilidade Global'],
+                s3h2: 'Principais Entregas <span class="italic">Estratégicas</span>',
+                s3cards: [
+                    { title: 'Pricing Tool Brasil — Turnaround SaaS', desc: 'Assumiu projeto crítico com <strong>2 anos de atraso</strong> e overspend acumulado. Reverteu o cenário com reestruturação financeira completa e entregou 3 módulos estratégicos Zilliant (Price Management, Deal Management e Price Analytics) em Go-Live dentro do prazo e orçamento.', tags: ['Turnaround','R$ 16.7M','SaaS B2B','CAPEX/OPEX'] },
+                    { title: 'Trade Deals Web — Go-Live Jan/2026', desc: 'Liderou a substituição do legado Vistex (SAP) pelo sistema TDW, com integração às plataformas SAP e Zilliant. Governança financeira com <strong>zero desvios de compliance</strong>, Status Reports executivos semanais com SPI/CPI e gestão completa do Hypercare pós Go-Live.', tags: ['R$ 2.67M','SAP Integration','Hypercare'] },
+                    { title: 'SAP S/4HANA T4.ELO — LATAM', desc: 'Governança do maior programa de transformação da Natura&Co, abrangendo Brasil, Chile, Colômbia e Peru. Coordenou <strong>40+ squads regionais</strong>, rituais executivos com Steering Committee e alinhamento entre Finanças, Supply Chain, IT e Tax na fase de template global.', tags: ['Global Governance','SAP Activate','LATAM'] },
+                    { title: 'Upgrade LIMS v8 — Economia R$ 228K', desc: 'Gerenciou o upgrade do sistema laboratorial Labware com substituição de conector e atualização de infraestrutura Citrix. Otimização do planejamento financeiro gerou <strong>economia líquida de R$ 228.000</strong> devolvida ao orçamento da Natura, com Hypercare de 30 dias e KPIs de SLA.', tags: ['R$ 1.48M','Cost Optimization','Infraestrutura'] }
+                ],
+                s4h2: 'Expertise Técnica & <span class="italic">Certificações</span>',
+                s4tools: 'Project Tools',
+                s4certs: ['Project Management Professional', 'Lean Six Sigma · Escola Edti', 'Scrum Fundamentals · SCRUMstudy', 'PMI & Google Certifications'],
+                s5h2: 'Vamos conversar sobre o seu <span class="italic text-gold">próximo projeto</span>.',
+                s5btn: '⬇ Baixar CV',
+                langBtn: '🌐 EN'
+            },
+            en: {
+                navLinks: ['01. Introduction', '02. Strategic Vision', '03. Success Cases', '04. Toolset & Certs', '05. Contact'],
+                s1p: 'Leadership that combines the rigor of project engineering with strategic business vision.',
+                s1span: 'PMP®, SFC™, Lean Six Sigma Green Belt & Digital Transformation Specialist.',
+                s2h2: 'Turning <br><span class="italic">Complexity</span> into Value.',
+                s2p: 'With over 15 years of experience, I have specialized in building strategic PMOs for high-complexity environments.',
+                s2budget: 'Largest Budget Managed',
+                s2scope: 'Scope of Operations',
+                s2diff: 'Executive Differentiators',
+                s2li: ['E2E Management of CAPEX & OPEX', 'SAP S/4HANA Specialist', 'Crisis project turnaround', 'C1 English & Global Mobility'],
+                s3h2: 'Key Strategic <span class="italic">Deliveries</span>',
+                s3cards: [
+                    { title: 'Pricing Tool Brazil — SaaS Turnaround', desc: 'Took over a critical project with <strong>2 years of delay</strong> and accumulated overspend. Reversed the situation with a full financial restructuring and delivered 3 strategic Zilliant modules (Price Management, Deal Management, Price Analytics) on time and within budget.', tags: ['Turnaround','R$ 16.7M','SaaS B2B','CAPEX/OPEX'] },
+                    { title: 'Trade Deals Web — Go-Live Jan/2026', desc: 'Led the replacement of the Vistex (SAP) legacy system with TDW, integrating SAP and Zilliant platforms. Full financial governance with <strong>zero compliance deviations</strong>, weekly executive status reports with SPI/CPI, and complete post-Go-Live Hypercare management.', tags: ['R$ 2.67M','SAP Integration','Hypercare'] },
+                    { title: 'SAP S/4HANA T4.ELO — LATAM', desc: "Governance of Natura&Co's largest transformation program, covering Brazil, Chile, Colombia and Peru. Coordinated <strong>40+ regional squads</strong>, executive rituals with Steering Committee and alignment across Finance, Supply Chain, IT and Tax in the global template phase.", tags: ['Global Governance','SAP Activate','LATAM'] },
+                    { title: 'LIMS v8 Upgrade — R$ 228K Savings', desc: 'Managed the Labware laboratory system upgrade with connector replacement and Citrix infrastructure update. Financial planning optimization generated <strong>net savings of R$ 228,000</strong> returned to Natura\'s budget, with a 30-day Hypercare plan and SLA KPIs.', tags: ['R$ 1.48M','Cost Optimization','Infrastructure'] }
+                ],
+                s4h2: 'Technical Expertise & <span class="italic">Certifications</span>',
+                s4tools: 'Project Tools',
+                s4certs: ['Project Management Professional', 'Lean Six Sigma · Escola Edti', 'Scrum Fundamentals · SCRUMstudy', 'PMI & Google Certifications'],
+                s5h2: 'Let\'s talk about your <span class="italic text-gold">next project</span>.',
+                s5btn: '⬇ Download CV',
+                langBtn: '🌐 PT'
+            }
+        };
+
+        let currentLang = 'pt';
+
+        function toggleLang() {
+            currentLang = currentLang === 'pt' ? 'en' : 'pt';
+            applyLang(currentLang);
+        }
+
+        function applyLang(lang) {
+            const t = translations[lang];
+
+            // Nav links
+            document.querySelectorAll('.nav-link').forEach((el, i) => { el.textContent = t.navLinks[i]; });
+
+            // Slide 1
+            document.getElementById('s1p').innerHTML = t.s1p + ' <br><span class="text-gold font-bold">' + t.s1span + '</span>';
+
+            // Slide 2
+            document.getElementById('s2h2').innerHTML = t.s2h2;
+            document.getElementById('s2p').textContent = t.s2p;
+            document.getElementById('s2budget').textContent = t.s2budget;
+            document.getElementById('s2scope').textContent = t.s2scope;
+            document.getElementById('s2diff').textContent = t.s2diff;
+            document.querySelectorAll('.s2li').forEach((el, i) => { el.childNodes[1].textContent = ' ' + t.s2li[i]; });
+
+            // Slide 3
+            document.getElementById('s3h2').innerHTML = t.s3h2;
+            document.querySelectorAll('.s3card-title').forEach((el, i) => { el.textContent = t.s3cards[i].title; });
+            document.querySelectorAll('.s3card-desc').forEach((el, i) => { el.innerHTML = t.s3cards[i].desc; });
+
+            // Slide 4
+            document.getElementById('s4h2').innerHTML = t.s4h2;
+            document.getElementById('s4tools').textContent = t.s4tools;
+            document.querySelectorAll('.s4cert').forEach((el, i) => { el.textContent = t.s4certs[i]; });
+
+            // Slide 5
+            document.getElementById('s5h2').innerHTML = t.s5h2;
+            document.getElementById('s5btn').innerHTML = '<i class="fas fa-download"></i> ' + (lang === 'en' ? 'Download CV' : 'Baixar CV');
+
+            // Lang button
+            document.getElementById('langBtn').textContent = t.langBtn;
+
+            // Download button
+            const btn = document.getElementById('s5btn');
+            if (lang === 'en') {
+                btn.href = 'cv_en.pdf';
+                btn.innerHTML = '<i class="fas fa-download"></i> Download Resume';
+            } else {
+                btn.href = 'Deborah_Carolina_de_Oliveira_Nunes_-_CL.pdf';
+                btn.innerHTML = '<i class="fas fa-download"></i> Baixar CV';
+            }
+
+            // Portfolio label
+            document.getElementById('portfolioLabel').textContent = lang === 'en' ? 'Executive Portfolio' : 'Portfólio Executivo';
+
+            // Specialist label
+            document.getElementById('specialistLabel').textContent = lang === 'en' ? 'PMP® Senior Project Manager' : 'Gerente de Projetos Sênior - PMP®';
         }
     </script>
 </body>
-
 </html>
