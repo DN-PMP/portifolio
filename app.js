@@ -9,7 +9,7 @@ let selTab = 0;
 const $ = (id) => document.getElementById(id);
 const T = () => window.CONTENT[currentLang];
 function ACC() {
-  return (window.TWEAKS && window.TWEAKS.accent) || '#c5a059';
+  return (window.TWEAKS && window.TWEAKS.accent) || '#b68235';
 }
 
 /* ---------- Navegação ---------- */
@@ -175,17 +175,17 @@ function renderMethods() {
   t.methods.forEach((m, i) => {
     const a = angles[i] * Math.PI / 180;
     const x = cx + R * Math.cos(a), y = cy + R * Math.sin(a);
-    lines += '<line x1="' + cx + '" y1="' + cy + '" x2="' + x + '" y2="' + y + '" stroke="rgba(197,160,89,0.45)" stroke-width="1.5"/>';
+    lines += '<line x1="' + cx + '" y1="' + cy + '" x2="' + x + '" y2="' + y + '" stroke="rgba(182,130,53,0.45)" stroke-width="1.5"/>';
     const sel = i === selMethod;
     nodes += '<g class="mnode" data-i="' + i + '" style="cursor:pointer;">' +
       (sel ? '<circle cx="' + x + '" cy="' + y + '" r="60" fill="none" stroke="' + ACC() + '" stroke-width="2" stroke-opacity="0.5"/>' : '') +
-      '<circle cx="' + x + '" cy="' + y + '" r="52" fill="' + (sel ? '' + ACC() + '' : '#0a192f') + '" stroke="' + ACC() + '" stroke-width="' + (sel ? 2.5 : 1) + '"/>' +
-      '<text x="' + x + '" y="' + (y - 3) + '" text-anchor="middle" fill="' + (sel ? '#0a192f' : '#ffffff') + '" font-size="15.5" font-weight="700" font-family="Montserrat,sans-serif">' + m.name + '</text>' +
-      '<text x="' + x + '" y="' + (y + 15) + '" text-anchor="middle" fill="' + (sel ? 'rgba(10,25,47,0.7)' : 'rgba(255,255,255,0.7)') + '" font-size="9" letter-spacing="1" font-family="Montserrat,sans-serif">' + m.area.toUpperCase() + '</text>' +
+      '<circle cx="' + x + '" cy="' + y + '" r="52" fill="' + (sel ? '' + ACC() + '' : '#2d2b2b') + '" stroke="' + ACC() + '" stroke-width="' + (sel ? 2.5 : 1) + '"/>' +
+      '<text x="' + x + '" y="' + (y - 3) + '" text-anchor="middle" fill="' + (sel ? '#2d2b2b' : '#ffffff') + '" font-size="15.5" font-weight="700" font-family="Montserrat,sans-serif">' + m.name + '</text>' +
+      '<text x="' + x + '" y="' + (y + 15) + '" text-anchor="middle" fill="' + (sel ? 'rgba(45,43,43,0.7)' : 'rgba(255,255,255,0.7)') + '" font-size="9" letter-spacing="1" font-family="Montserrat,sans-serif">' + m.area.toUpperCase() + '</text>' +
       '</g>';
   });
   const center = '<circle cx="' + cx + '" cy="' + cy + '" r="56" fill="#f8f5f0" stroke="' + ACC() + '" stroke-width="2"/>' +
-    '<text x="' + cx + '" y="' + (cy + 5) + '" text-anchor="middle" fill="#0a192f" font-size="17" font-weight="600" font-style="italic" font-family="Cormorant Garamond,serif">' + t.centerLabel + '</text>';
+    '<text x="' + cx + '" y="' + (cy + 5) + '" text-anchor="middle" fill="#2d2b2b" font-size="17" font-weight="600" font-style="italic" font-family="Cormorant Garamond,serif">' + t.centerLabel + '</text>';
   $('methodsRoot').innerHTML = '<svg viewBox="0 0 560 410" style="width:100%; max-width:560px; display:block; margin:0 auto;">' + lines + center + nodes + '</svg>';
   $('methodsRoot').querySelectorAll('.mnode').forEach(g => g.addEventListener('click', () => { selMethod = parseInt(g.dataset.i); renderMethods(); }));
   const det = $('methodDetail');
@@ -304,7 +304,7 @@ function renderTabPanel() {
         '<circle cx="28" cy="28" r="' + r + '" fill="#ffffff" stroke="rgba(197,160,89,0.25)" stroke-width="5"/>' +
         '<circle cx="28" cy="28" r="' + r + '" fill="none" stroke="' + ACC() + '" stroke-width="5" stroke-linecap="round" ' +
         'stroke-dasharray="' + (c * pct / 100) + ' ' + c + '" transform="rotate(-90 28 28)"/>' +
-        '<text x="28" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#0a192f" font-family="Montserrat,sans-serif">' + pct + '%</text></svg>';
+        '<text x="28" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#2d2b2b" font-family="Montserrat,sans-serif">' + pct + '%</text></svg>';
     };
     const scaleViz = '<div style="display:grid; grid-template-columns:repeat(6,1fr); gap:0.5rem; max-width:52rem; position:relative; padding-top:0.5rem;">' +
       t.scale.map(s =>
@@ -320,9 +320,9 @@ function renderTabPanel() {
     const L = t.vLeft, R = t.vRight, bw = 176, bh = 46;
     const defs = '<defs>' +
       '<filter id="vshadow" x="-20%" y="-20%" width="140%" height="160%">' +
-      '<feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#0a192f" flood-opacity="0.18"/></filter>' +
+      '<feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#2d2b2b" flood-opacity="0.18"/></filter>' +
       '<linearGradient id="vnavy" x1="0" y1="0" x2="0" y2="1">' +
-      '<stop offset="0" stop-color="#14304f"/><stop offset="1" stop-color="#0a192f"/></linearGradient>' +
+      '<stop offset="0" stop-color="#444141"/><stop offset="1" stop-color="#2d2b2b"/></linearGradient>' +
       '<marker id="varr" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">' +
       '<path d="M0,0 L8,4 L0,8 z" fill="' + ACC() + '"/></marker>' +
       '</defs>';
@@ -331,20 +331,20 @@ function renderTabPanel() {
       '<text x="' + (x + bw / 2) + '" y="' + (y + bh / 2 + 4) + '" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="600" font-family="Montserrat,sans-serif">' + label + '</text>';
     const boxR = (x, y, label) =>
       '<rect x="' + x + '" y="' + y + '" width="' + bw + '" height="' + bh + '" rx="8" fill="#ffffff" stroke="' + ACC() + '" stroke-width="1.5" filter="url(#vshadow)"/>' +
-      '<text x="' + (x + bw / 2) + '" y="' + (y + bh / 2 + 4) + '" text-anchor="middle" fill="#0a192f" font-size="12" font-weight="700" font-family="Montserrat,sans-serif">' + label + '</text>';
+      '<text x="' + (x + bw / 2) + '" y="' + (y + bh / 2 + 4) + '" text-anchor="middle" fill="#2d2b2b" font-size="12" font-weight="700" font-family="Montserrat,sans-serif">' + label + '</text>';
     const dash = (x1, x2, y) => '<line x1="' + (x1 + 10) + '" y1="' + y + '" x2="' + (x2 - 10) + '" y2="' + y + '" stroke="' + ACC() + '" stroke-width="1.2" stroke-dasharray="6 5" marker-start="url(#varr)" marker-end="url(#varr)" opacity="0.85"/>';
     const oy = 58;
-    const vpath = '<polyline points="108,' + (45 + oy) + ' 143,' + (120 + oy) + ' 178,' + (195 + oy) + ' 348,' + (285 + oy) + ' 518,' + (195 + oy) + ' 553,' + (120 + oy) + ' 588,' + (45 + oy) + '" fill="none" stroke="rgba(197,160,89,0.3)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>';
+    const vpath = '<polyline points="108,' + (45 + oy) + ' 143,' + (120 + oy) + ' 178,' + (195 + oy) + ' 348,' + (285 + oy) + ' 518,' + (195 + oy) + ' 553,' + (120 + oy) + ' 588,' + (45 + oy) + '" fill="none" stroke="rgba(182,130,53,0.3)" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>';
     const smoke =
       '<rect x="512" y="8" width="' + bw + '" height="' + bh + '" rx="8" fill="' + ACC() + '" filter="url(#vshadow)"/>' +
-      '<text x="' + (512 + bw / 2) + '" y="' + (8 + bh / 2 + 4) + '" text-anchor="middle" fill="#0a192f" font-size="12.5" font-weight="700" font-family="Montserrat,sans-serif">' + t.vSmoke[0] + '</text>' +
+      '<text x="' + (512 + bw / 2) + '" y="' + (8 + bh / 2 + 4) + '" text-anchor="middle" fill="#2d2b2b" font-size="12.5" font-weight="700" font-family="Montserrat,sans-serif">' + t.vSmoke[0] + '</text>' +
       '<line x1="' + (500 + bw / 2 + 12) + '" y1="' + (22 + oy - 2) + '" x2="' + (512 + bw / 2) + '" y2="' + (8 + bh + 4) + '" stroke="' + ACC() + '" stroke-width="1.4" marker-end="url(#varr)"/>';
     const vsvg = '<svg viewBox="0 0 700 400" style="width:100%; max-width:700px; display:block; margin:0.75rem 0 1rem;">' + defs + vpath +
       boxL(20, 22 + oy, L[0]) + boxL(55, 97 + oy, L[1]) + boxL(90, 172 + oy, L[2]) +
       boxR(500, 22 + oy, R[0]) + boxR(465, 97 + oy, R[1]) + boxR(430, 172 + oy, R[2]) +
       smoke +
       '<rect x="260" y="' + (262 + oy) + '" width="' + bw + '" height="' + bh + '" rx="8" fill="' + ACC() + '" filter="url(#vshadow)"/>' +
-      '<text x="348" y="' + (289 + oy) + '" text-anchor="middle" fill="#0a192f" font-size="12.5" font-weight="700" font-family="Montserrat,sans-serif">' + t.vBottom + '</text>' +
+      '<text x="348" y="' + (289 + oy) + '" text-anchor="middle" fill="#2d2b2b" font-size="12.5" font-weight="700" font-family="Montserrat,sans-serif">' + t.vBottom + '</text>' +
       dash(20 + bw, 500, 45 + oy) + dash(55 + bw, 465, 120 + oy) + dash(90 + bw, 430, 195 + oy) +
       '</svg>';
     const envColors = ['#2a6fdb', '#d9a406', '' + ACC() + '', '#1f8a5b'];
@@ -488,7 +488,7 @@ function showTestimonial(i) {
     slot.style.opacity = '1';
   }, 220);
   document.querySelectorAll('#testDots span').forEach((d, di) => {
-    d.style.background = di === testIdx ? 'var(--gold)' : 'rgba(197,160,89,0.3)';
+    d.style.background = di === testIdx ? 'var(--gold)' : 'rgba(182,130,53,0.3)';
     d.style.width = di === testIdx ? '22px' : '8px';
   });
 }
@@ -511,7 +511,7 @@ function renderTestimonials() {
     '</div>' +
     '<div style="display:flex; align-items:center; justify-content:space-between; margin-top:0.9rem;">' +
       '<div id="testDots" style="display:flex; gap:6px; align-items:center;">' +
-        t.testimonials.map(() => '<span style="height:8px; border-radius:4px; background:rgba(197,160,89,0.3); cursor:pointer; transition:all 0.3s;"></span>').join('') +
+        t.testimonials.map(() => '<span style="height:8px; border-radius:4px; background:rgba(182,130,53,0.3); cursor:pointer; transition:all 0.3s;"></span>').join('') +
       '</div>' +
       '<div style="display:flex; gap:6px;">' +
         '<button onclick="stepTestimonial(-1)" aria-label="Anterior" style="width:30px; height:30px; background:transparent; border:1px solid var(--gold-soft); color:var(--gold); cursor:pointer; font-size:0.7rem;">‹</button>' +
@@ -588,9 +588,9 @@ function applyLang() {
 }
 
 /* ---------- Tweaks (Personalizar) ---------- */
-const TW_DEFAULTS = { accent: '#c5a059', navy: '#0a192f', photo: true, anim: true, en: false };
-const TW_ACCENTS = [['#c5a059', 'Dourado'], ['#b3541e', 'Cobre'], ['#2a6fdb', 'Azul'], ['#1f8a5b', 'Verde']];
-const TW_NAVIES = [['#0a192f', 'Marinho'], ['#16181d', 'Grafite'], ['#0b2e2e', 'Petróleo']];
+const TW_DEFAULTS = { accent: '#b68235', navy: '#2d2b2b', photo: true, anim: true, en: false };
+const TW_ACCENTS = [['#b68235', 'Dourado'], ['#b3541e', 'Cobre'], ['#2a6fdb', 'Azul'], ['#1f8a5b', 'Verde']];
+const TW_NAVIES = [['#2d2b2b', 'Marinho'], ['#16181d', 'Grafite'], ['#0b2e2e', 'Petróleo']];
 window.TWEAKS = Object.assign({}, TW_DEFAULTS);
 try { Object.assign(window.TWEAKS, JSON.parse(localStorage.getItem('dn_tweaks') || '{}')); } catch (e) {}
 

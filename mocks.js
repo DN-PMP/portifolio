@@ -1,7 +1,7 @@
 // ===== Mockups anonimizados de entregas (recriações em HTML, sem dados de cliente) =====
 // Cada entrada: { url, cap: [pt, en], html }
 (function () {
-  const G = '#c5a059', NAVY = '#0a192f', SOFT = 'rgba(197,160,89,0.35)';
+  const G = '#b68235', NAVY = '#2d2b2b', SOFT = 'rgba(182,130,53,0.35)';
   const redact = '████';
 
   // ---- componentes utilitários ----
@@ -48,8 +48,8 @@
     sectionTitle('Fases do projeto') +
     '<div style="display:flex; gap:4px;">' +
       [['Prepare', 1], ['Explore', 1], ['Realize', 1], ['Deploy', 0.5], ['Run', 0]].map(f =>
-        '<div style="flex:1; text-align:center;"><div style="height:6px; background:' + (f[1] === 1 ? G : f[1] ? 'rgba(197,160,89,0.5)' : '#e5e7eb') + ';"></div>' +
-        '<div style="font-size:0.62rem; color:#475569; margin-top:5px; font-weight:600;">' + f[0] + '</div></div>').join('') +
+        '<div style="flex:1; text-align:center;"><div style="height:6px; background:' + (f[1] === 1 ? G : f[1] ? 'rgba(182,130,53,0.5)' : '#e5e7eb') + ';"></div>' +
+        '<div style="font-size:0.62rem; color:#605d5d; margin-top:5px; font-weight:600;">' + f[0] + '</div></div>').join('') +
     '</div>' +
     sectionTitle('Time do projeto') +
     '<div style="display:flex; gap:0.7rem; flex-wrap:wrap;">' +

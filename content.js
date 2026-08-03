@@ -127,7 +127,7 @@ pt: {
         { top: true, co: 'Natura · 2021–2022', role: 'Gerente de Projeto (PMO) · Natura · Jul 2021 – Fev 2022', title: 'Upgrade LIMS v8 — Economia R$ 228K',
           desc: 'Gerenciou o upgrade do sistema laboratorial Labware com substituição de conector e atualização de infraestrutura Citrix. Otimização do planejamento financeiro gerou <strong>economia líquida de R$ 228.000</strong> devolvida ao orçamento da Natura, com Hypercare de 30 dias e KPIs de SLA.',
           tags: ['R$ 1.48M', 'Cost Optimization', 'Infraestrutura'] },
-        { co: 'Techmahindra · 2016–2018', role: 'Gerente de Projetos / PMO · Delivery SAP · Abr 2016 – Jan 2018', title: 'PMO Corporativo — Sistema de Gerenciamento de Projetos',
+        { co: 'Techmahindra · 2016–2018', role: 'Analista PMO · Delivery SAP · Abr 2016 – Jan 2018', title: 'PMO Corporativo — Sistema de Gerenciamento de Projetos',
           desc: 'Liderou o PMO corporativo, estabelecendo e implementando um <strong>Sistema de Gerenciamento de Projetos (SGP)</strong> que otimizou a eficiência operacional e padronizou os requisitos de documentação. Modelou processos de negócio em BPMN, criou materiais de treinamento e apoiou a qualificação técnica de fornecedores.',
           tags: ['PMO Corporativo', 'BPMN', 'Padronização'] },
         { co: 'Electrolux · 2026', role: 'PMO Sênior · Abr – Jun 2026', title: 'Dig4Sales — Transformação Digital B2B',
